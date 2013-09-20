@@ -1,0 +1,24 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
+    <f:view>
+        <h:form>
+
+            <div style="float:right">
+                <a href="#{nav.baseUrl}/#{nav.rssUrl}">
+                    <img src="#{nav.baseUrl}/rss.png"></img></a>
+            </div>
+
+            <div>
+                <ul>
+                    <ui:repeat value="#{nav.layouts}" var="layout">
+                        <li>
+                            <a href="#{layout.url}">
+                                <h:outputText value="#{layout.name}" />
+                            </a>
+                        </li>
+                    </ui:repeat>
+                </ul>
+            </div>
+
+        </h:form>
+    </f:view>
+</div>
